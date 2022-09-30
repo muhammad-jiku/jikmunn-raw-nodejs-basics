@@ -8,4 +8,7 @@ emitter.on('sayWords', () => {
 });
 
 // creating a event or raise an event
-emitter.emit('sayWords');
+// emitter.emit('sayWords');
+setTimeout(() => {
+  emitter.emit('sayWords');
+}, 5600);
