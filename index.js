@@ -1,9 +1,8 @@
 const fs = require('fs');
 
-const ourReadStream = fs.createReadStream('./bigData.txt', 'utf-8');
+const ourReadStream = fs.createReadStream('./bigData.txt');
 
-ourReadStream.on('data', (data) => {
+ourReadStream.on('data', (chunk) => {
   // every chunk is a buffer
-  //   console.log(chunk);
-  console.log(data);
+  console.log(chunk?.toString());
 });
